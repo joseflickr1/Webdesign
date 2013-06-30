@@ -1,0 +1,32 @@
+@base: #f5f6f6;
+
+body{
+	background-color: @base;
+}
+
+
+.size1of2 {width: 50%}
+.size1of3{width:33.33333%;}
+.size2of3{width:66.66666%;}
+
+.unit {
+	float: left;
+}
+
+.line:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+.lastUnit {
+	display: table-cell;
+	float: none;
+	_position: relative;
+	_left: -3px;
+	_margin-right: -3px;
+	width: auto;
+}
+
+
