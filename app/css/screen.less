@@ -1,32 +1,75 @@
-@base: #f5f6f6;
+@base: #fff;
+@black: #333;
+@brown: #696158;
+@sans-serifFontFamily: Arial,Helvetica,sans-serif;
+
+
+
+/* **************** WIP ***************** */
+
 
 body{
-	background-color: @base;
+	background: @base;
+	color: @black;
+	font-size: 1em;
+	font-family: Arial,Helvetica,sans-serif;
+	line-height: 1.5;
+}
+ul{ list-style: none; margin: 0px; padding: 0px; }
+
+
+
+.container {
+	margin: 0 auto;
+	width: 950px;
+}
+.intro { 
+	color: @brown;
 }
 
 
-.size1of2 {width: 50%}
+.plus-sign {
+	display: inline-block;
+	width: 25px;
+	height: 25px;	
+	line-height: 14px;
+	vertical-align: text-top;
+	background-image: url("http://utdanning.no/sites/all/themes/uno/images/plus-sign.png");
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+}
+.infoPane {
+	background-color: #edece9;
+	border: 1px solid #EDECFA;
+}
+
+.infoEducation {
+	background-color: #d7e6e9;
+}
+
+
+
+.mtl { margin-top: 15px;}
+.mtm { margin-top: 10px;}
+.pam { padding: 10px;}
+
+
+
+/* **************** GRIDS ***************** */
+.line:after{content: ".";display: block;height: 0;clear: both;visibility: hidden;}
+.lastUnit:after{content: " . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ";visibility:hidden; clear:both;height:0 !important;display:block;line-height:0;}
+.line{*zoom:1;}
+.unit{float:left;}
+.size1of1{float:none;}
+.size1of2{width:50%;}
 .size1of3{width:33.33333%;}
 .size2of3{width:66.66666%;}
-
-.unit {
-	float: left;
-}
-
-.line:after {
-	content: ".";
-	display: block;
-	height: 0;
-	clear: both;
-	visibility: hidden;
-}
-.lastUnit {
-	display: table-cell;
-	float: none;
-	_position: relative;
-	_left: -3px;
-	_margin-right: -3px;
-	width: auto;
-}
+.size1of4{width:25%;}
+.size3of4{width:75%;}
+.size1of5{width:20%;}
+.size2of5{width:40%;}
+.size3of5{width:60%;}
+.size4of5{width:80%;}
+.lastUnit {display: table-cell; *display:block;*zoom:1;float:none;_position:relative; _left:-3px; _margin-right: -3px;width:auto;}
 
 
