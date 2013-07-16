@@ -1,51 +1,4 @@
-/* **************** WIP ***************** */
-body {
-  background: #ffffff;
-  color: #333333;
-  font-size: 1em;
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.5;
-}
-ul {
-  list-style: none;
-  margin: 0px;
-  padding: 0px;
-}
-img { height: 150px;}
-.container {
-  margin: 0 auto;
-  width: 950px;
-}
-.intro {
-  color: #696158;
-}
-.plus-sign {
-  display: inline-block;
-  width: 25px;
-  height: 25px;
-  line-height: 14px;
-  vertical-align: text-top;
-  background-image: url("http://utdanning.no/sites/all/themes/uno/images/plus-sign.png");
-  background-position: 0px 0px;
-  background-repeat: no-repeat;
-}
-.infoPane {
-  background-color: #edece9;
-  border: 1px solid #EDECFA;
-}
-.infoEducation {
-  background-color: #d7e6e9;
-}
-.mtl {
-  margin-top: 15px;
-}
-.mtm {
-  margin-top: 10px;
-}
-.pam {
-  padding: 10px;
-}
-/* **************** GRIDS ***************** */
+/* **************** GRIDS OOCSS ***************** */
 .line:after {
   content: ".";
   display: block;
@@ -106,4 +59,114 @@ img { height: 150px;}
   _left: -3px;
   _margin-right: -3px;
   width: auto;
+}
+/* **************** GRIDS OOCSS ***************** */
+/* ---------------- WIP generell ----------------- */
+/* OOCSS og Bootrap twitter 					   */
+/* ----------------------------------------------- */
+/*Background color*/
+/*Text color*/
+html {
+  background: #fafaf6;
+}
+body {
+  color: #333333;
+  font-size: 1em;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  margin: 0px;
+}
+ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+.container {
+  margin: 0 auto;
+}
+.intro {
+  color: #d63737;
+  background-color: #2b2b2b;
+  font-family: "proxima-nova", sans-serif;
+  text-transform: uppercase;
+  padding: 1.5em;
+  min-height: 17em;
+}
+.intro h1 {
+  font-size: 3em;
+}
+.intro h3 {
+  margin-top: 1em;
+  font-weight: 500;
+  font-size: 1.0625rem;
+  line-height: 1.5em;
+  letter-spacing: .2em;
+  max-width: 30em;
+}
+.plus-sign {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  line-height: 14px;
+  vertical-align: text-top;
+  background-image: url("http://utdanning.no/sites/all/themes/uno/images/plus-sign.png");
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+}
+.infoPane {
+  background-color: #edece9;
+  border: 1px solid #EDECFA;
+}
+.infoEducation {
+  background-color: #d7e6e9;
+}
+.mtl {
+  margin-top: 15px;
+}
+.mtm {
+  margin-top: 10px;
+}
+.pam {
+  padding: 10px;
+}
+.line [class*="unit"]:first-child {
+  padding-left: 0;
+}
+.line [class*="unit"] {
+  padding-left: 15px;
+}
+/* -----------------WIP mobil responsiv ---------------- */
+@media screen and (max-width: 48em) {
+  /* -----------------WIP content ---------------- */
+  .line [class*="unit"] {
+    float: none;
+    width: 100%;
+    padding-left: 0px;
+  }
+  /* -----------------WIP menu ---------------- */
+  .js-menu-open .wrapper {
+    -webkit-transform: translate(10%, 0);
+    -webkit-transform: translate3d(10%, 0, 0);
+  }
+  .page-head {
+    background-color: #2b2b2b;
+    border-bottom: 1px solid #464646;
+    position: relative;
+    min-height: 3em;
+    max-width: 1310px;
+    margin: 0 auto;
+  }
+  .page-head .nav-list li {
+    text-transform: uppercase;
+    display: block;
+    border-bottom: 1px solid #3b3b3b;
+  }
+  .page-head .nav-list li a {
+    padding: .7em 1em .7em 1em;
+    border-bottom: 1px solid #222;
+    display: block;
+    color: #a3a3a3;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.6);
+    letter-spacing: .2em;
+  }
 }
