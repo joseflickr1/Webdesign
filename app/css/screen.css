@@ -1,4 +1,14 @@
-/* **************** GRIDS OOCSS ***************** */
+/*CSS struktur
+
+TODO: Denne filen kan deles i:
+
+reset.css
+grid.css
+mobil.css
+layout.css
+
+*/
+/* **************** GRIDS fra OOCSS ***************** */
 .line:after {
   content: ".";
   display: block;
@@ -60,14 +70,40 @@
   _margin-right: -3px;
   width: auto;
 }
-/* **************** GRIDS OOCSS ***************** */
+/* **************** GRIDS fra OOCSS ***************** */
 /* ---------------- WIP generell ----------------- */
-/* OOCSS og Bootrap twitter 					   */
+/* Inspirert fra OOCSS og Bootrap twitter 		   */
 /* ----------------------------------------------- */
+/*margin and padding oocss*/
+.mtl {
+  margin-top: 15px;
+}
+.mtm {
+  margin-top: 10px;
+}
+.pam {
+  padding: 10px;
+}
+.line [class*="unit"]:first-child {
+  padding-left: 0;
+}
+.line [class*="unit"] {
+  padding-left: 15px;
+}
+/*reset*/
+ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+img {
+  border: 0;
+}
+/* ---------------- APP ----------------- */
 /*Background color*/
 /*Text color*/
 html {
-  background: #fafaf6;
+  background: #2b2b2b;
 }
 body {
   color: #333333;
@@ -76,11 +112,11 @@ body {
   line-height: 1.5;
   margin: 0px;
 }
-ul {
-  list-style: none;
-  margin: 0px;
-  padding: 0px;
+img {
+  vertical-align: middle;
+  max-width: 100%;
 }
+/*container*/
 .container {
   margin: 0 auto;
 }
@@ -103,37 +139,90 @@ ul {
   letter-spacing: .2em;
   max-width: 30em;
 }
-.plus-sign {
+/*page-cv*/
+.page-cv .cv-bullets > li {
+  background-color: #e6e5e1;
+  cursor: pointer;
+  margin-top: .625em;
+}
+.page-cv .cv-bullets img {
   display: inline-block;
-  width: 25px;
-  height: 25px;
+  width: 25%;
+}
+.page-cv .cv-bullets .wrap {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+.page-cv .cv-bullets .detail {
+  font-family: "proxima-nova", sans-serif;
+  text-transform: uppercase;
+  line-height: 0.5em;
+  font-weight: 600;
+  position: absolute;
+  top: 25%;
+  left: 40%;
+  display: inline-block;
+}
+.page-cv .cv-bullets .detail h2 {
+  font-size: 1.2em;
+}
+.page-cv .cv-bullets .detail .text {
+  font-size: 0.9em;
+}
+.page-cv .cv-bullets .closed .cv-bullet-content {
+  display: none;
+}
+.page-cv .cv-bullets .open .cv-bullet-content {
+  display: block;
+}
+.page-cv .cv-bullets .cv-bullet-content {
+  background-color: #fff;
+  border-bottom: 5px solid #2b2b2b;
+  padding: 1em 1em 3em 1em;
+}
+.page-cv .cv-bullets li .plus-sign {
+  position: absolute;
+  top: 40%;
+  right: 1.625em;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
   line-height: 14px;
   vertical-align: text-top;
-  background-image: url("http://utdanning.no/sites/all/themes/uno/images/plus-sign.png");
+  background-image: url("../img/plus.svg");
   background-position: 0px 0px;
   background-repeat: no-repeat;
-}
-.infoPane {
-  background-color: #edece9;
-  border: 1px solid #EDECFA;
 }
 .infoEducation {
   background-color: #d7e6e9;
 }
-.mtl {
-  margin-top: 15px;
+.wrapper {
+  -webkit-transition: all .25s ease;
+  -moz-transition: all .25s ease;
+  -ms-transition: all .25s ease;
+  -o-transition: all .25s ease;
+  transition: all .25s ease;
+  -webkit-box-shadow: -3px 0 10px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: -3px 0 10px rgba(0, 0, 0, 0.8);
+  -ms-box-shadow: -3px 0 10px rgba(0, 0, 0, 0.8);
+  -o-box-shadow: -3px 0 10px rgba(0, 0, 0, 0.8);
+  box-shadow: -3px 0 10px rgba(0, 0, 0, 0.8);
+  position: relative;
+  padding-bottom: 8.4em;
+  min-height: 100%;
+  background-color: #fafaf6;
 }
-.mtm {
-  margin-top: 10px;
+/*page-head*/
+.page-head .nav-list {
+  position: absolute !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  left: -80% !important;
+  width: 80%;
 }
-.pam {
-  padding: 10px;
-}
-.line [class*="unit"]:first-child {
-  padding-left: 0;
-}
-.line [class*="unit"] {
-  padding-left: 15px;
+.page-head {
+  display: none;
 }
 /* -----------------WIP mobil responsiv ---------------- */
 @media screen and (max-width: 48em) {
@@ -145,16 +234,19 @@ ul {
   }
   /* -----------------WIP menu ---------------- */
   .js-menu-open .wrapper {
-    -webkit-transform: translate(10%, 0);
-    -webkit-transform: translate3d(10%, 0, 0);
+    -webkit-transform: translate(80%, 0);
+    -webkit-transform: translate3d(80%, 0, 0);
   }
   .page-head {
+    display: block;
     background-color: #2b2b2b;
     border-bottom: 1px solid #464646;
     position: relative;
     min-height: 3em;
     max-width: 1310px;
     margin: 0 auto;
+    /*svg.css*/
+  
   }
   .page-head .nav-list li {
     text-transform: uppercase;
@@ -168,5 +260,27 @@ ul {
     color: #a3a3a3;
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.6);
     letter-spacing: .2em;
+  }
+  .page-head .nav-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: -1px;
+    width: 50px;
+    background-color: #a18e5c;
+    text-indent: 300px;
+    overflow: hidden;
+    padding: 1em;
+  }
+  .page-head .nav-menu {
+    background-image: url(../img/menu.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: auto auto;
+    -webkit-background-origin: content-box;
+    -moz-background-origin: content-box;
+    -ms-background-origin: content-box;
+    -o-background-origin: content-box;
+    background-origin: content-box;
   }
 }
