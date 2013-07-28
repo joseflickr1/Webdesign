@@ -100,8 +100,7 @@ img {
   border: 0;
 }
 /* ---------------- APP ----------------- */
-/*Background color*/
-/*Text color*/
+/*Colors ---test -- */
 html {
   background: #2b2b2b;
 }
@@ -121,15 +120,17 @@ img {
   margin: 0 auto;
 }
 .intro {
-  color: #d63737;
+  color: #ff8686;
   background-color: #2b2b2b;
   font-family: "proxima-nova", sans-serif;
   text-transform: uppercase;
   padding: 1.5em;
   min-height: 17em;
+  position: relative;
 }
 .intro h1 {
   font-size: 3em;
+  max-width: 80%;
 }
 .intro h3 {
   margin-top: 1em;
@@ -156,6 +157,7 @@ img {
 }
 .page-cv .cv-bullets .detail {
   font-family: "proxima-nova", sans-serif;
+  color: #a18e5c;
   text-transform: uppercase;
   line-height: 0.5em;
   font-weight: 600;
@@ -181,18 +183,34 @@ img {
   border-bottom: 5px solid #2b2b2b;
   padding: 1em 1em 3em 1em;
 }
-.page-cv .cv-bullets li .plus-sign {
+.page-cv .cv-bullets .btn {
   position: absolute;
   top: 40%;
   right: 1.625em;
   display: inline-block;
   width: 30px;
   height: 30px;
-  line-height: 14px;
-  vertical-align: text-top;
+}
+.page-cv .cv-bullets .open .btn {
+  background-image: url("../img/minus.svg");
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+}
+.page-cv .cv-bullets .closed .btn {
   background-image: url("../img/plus.svg");
   background-position: 0px 0px;
   background-repeat: no-repeat;
+}
+.sticker {
+  background-image: url("../img/sticky.svg");
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: -11px;
+  left: 0px;
+  width: 130px;
+  height: 151px;
+  z-index: 5000;
 }
 .infoEducation {
   background-color: #d7e6e9;
@@ -235,7 +253,15 @@ img {
   /* -----------------WIP menu ---------------- */
   .js-menu-open .wrapper {
     -webkit-transform: translate(80%, 0);
+    -moz-transform: translate(80%, 0);
+    -ms-transform: translate(80%, 0);
+    -o-transform: translate(80%, 0);
+    transform: translate(80%, 0);
     -webkit-transform: translate3d(80%, 0, 0);
+    -moz-transform: translate3d(80%, 0, 0);
+    -ms-transform: translate3d(80%, 0, 0);
+    -o-transform: translate3d(80%, 0, 0);
+    transform: translate3d(80%, 0, 0);
   }
   .page-head {
     display: block;
@@ -282,5 +308,19 @@ img {
     -ms-background-origin: content-box;
     -o-background-origin: content-box;
     background-origin: content-box;
+  }
+  /*Fonts*/
+  .intro h1 {
+    font-size: 30px;
+    font-size: 1.875rem;
+    line-height: 1.6;
+    font-weight: 700;
+    line-height: 1em;
+    letter-spacing: .05em;
+    -webkit-transition: opacity .6s linear;
+    -moz-transition: opacity .6s linear;
+    -ms-transition: opacity .6s linear;
+    -o-transition: opacity .6s linear;
+    transition: opacity .6s linear;
   }
 }

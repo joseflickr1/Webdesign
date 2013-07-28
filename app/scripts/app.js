@@ -11,7 +11,6 @@
 		}
 	});
 
-
 	$(".cv-bullets").on("click", "li", function(e) {
 		e.preventDefault();
 		var $li = $(this);

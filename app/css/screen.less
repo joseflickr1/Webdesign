@@ -54,15 +54,16 @@ layout.css
 ul{ list-style: none; margin: 0px; padding: 0px; } 
 img { border: 0;}
 /* ---------------- APP ----------------- */
-/*Background color*/
+
+/*Colors ---test -- */
 @base: #fff;
 @darkbrown: #2b2b2b;
 @cream: #fafaf6;
 
-/*Text color*/
 @black: #333;
-@red: #d63737;
+@pink: #FF8686;
 @brown: #696158;
+@gold: #a18e5c;
 
 @sans-serifFontFamily: Arial,Helvetica,sans-serif;
 @sans-serifProxima: "proxima-nova",sans-serif;
@@ -90,15 +91,18 @@ img {
 
 }
 .intro { 
-	color: @red;
-	background-color: #2b2b2b;
+	color: @pink;
+	background-color: @darkbrown;
 	font-family: @sans-serifProxima;
 	text-transform: uppercase;
 	padding: 1.5em;
 	min-height: 17em;
 
+	position: relative;
+
 	h1 {
 		font-size: 3em;
+		max-width: 80%;
 	}
 	h3 {
 		margin-top: 1em;
@@ -131,6 +135,7 @@ img {
 
 	.detail {
 		font-family: @sans-serifProxima;
+		color: @gold;
 		text-transform: uppercase;
 		line-height: 0.5em;
 		font-weight: 600;
@@ -146,32 +151,56 @@ img {
 			font-size: 0.9em;
 		}
 	}
-	.closed .cv-bullet-content { display: none; }
-	.open .cv-bullet-content { display: block; }
+	.closed .cv-bullet-content { 
+		display: none; 
+	}
+	.open .cv-bullet-content { 
+		display: block; 
+	}
 	.cv-bullet-content {
 		background-color: #fff;
-		border-bottom: 5px solid #2b2b2b;
+		border-bottom: 5px solid @darkbrown;
 		padding: 1em 1em 3em 1em;
 
 	}
 
-	li .plus-sign {
+	.btn {		
 		position: absolute;
 		top: 40%;
 		right: 1.625em;
-
 		display: inline-block;
 		width: 30px;
 		height: 30px;	
-		line-height: 14px;
-		vertical-align: text-top;
+	}
+	.open .btn{
+		background-image: url("../img/minus.svg");
+		background-position: 0px 0px;
+		background-repeat: no-repeat;
+	}
+	.closed .btn{
 		background-image: url("../img/plus.svg");
 		background-position: 0px 0px;
 		background-repeat: no-repeat;
 	}
+
 }
 
+.sticker {
+	background-image: url("../img/sticky.svg");
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
 
+	position: absolute;
+	bottom: -11px;
+	left: 0px;
+	width: 130px;
+	height: 151px;
+	z-index: 5000;
+
+
+
+
+}
 
 .infoEducation {
 	background-color: #d7e6e9;
@@ -218,7 +247,15 @@ img {
 
 	.js-menu-open .wrapper {
 		-webkit-transform:translate(80%, 0);
-		-webkit-transform:translate3d(80%, 0, 0);	
+		-moz-transform:translate(80%, 0);
+		-ms-transform:translate(80%, 0);
+		-o-transform:translate(80%, 0);
+		transform:translate(80%, 0);
+		-webkit-transform:translate3d(80%, 0, 0);
+		-moz-transform:translate3d(80%, 0, 0);
+		-ms-transform:translate3d(80%, 0, 0);
+		-o-transform:translate3d(80%, 0, 0);
+		transform:translate3d(80%, 0, 0);
 	}
 	.page-head {
 		display: block;
@@ -249,7 +286,7 @@ img {
 			left:0;
 			bottom:-1px;
 			width:50px;
-			background-color:#a18e5c;
+			background-color:@gold;
 			text-indent:300px;
 			overflow:hidden;
 			padding:1em;
@@ -266,6 +303,23 @@ img {
 			-ms-background-origin:content-box;
 			-o-background-origin:content-box;
 			background-origin:content-box;
+		}
+	}
+
+	/*Fonts*/
+	.intro {
+		h1 {
+			font-size:30px;
+			font-size:1.875rem;
+			line-height:1.6;
+			font-weight:700;
+			line-height:1em;
+			letter-spacing:.05em;
+			-webkit-transition:opacity .6s linear;
+			-moz-transition:opacity .6s linear;
+			-ms-transition:opacity .6s linear;
+			-o-transition:opacity .6s linear;
+			transition:opacity .6s linear;
 		}
 	}
 }
