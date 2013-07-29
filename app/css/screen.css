@@ -81,8 +81,14 @@ layout.css
 .mtm {
   margin-top: 10px;
 }
+.mbm {
+  margin-bottom: 10px;
+}
 .pam {
   padding: 10px;
+}
+.pbm {
+  padding-bottom: 10px;
 }
 .line [class*="unit"]:first-child {
   padding-left: 0;
@@ -101,14 +107,18 @@ img {
 }
 /* ---------------- APP ----------------- */
 /*Colors ---test -- */
+table td,
+table th {
+  padding: 10px;
+}
 html {
-  background: #2b2b2b;
+  font-family: sans-serif;
+  background: #f8f8f8;
+  color: #666666;
 }
 body {
-  color: #333333;
   font-size: 1em;
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.5;
+  line-height: 1.2;
   margin: 0px;
 }
 img {
@@ -120,7 +130,7 @@ img {
   margin: 0 auto;
 }
 .intro {
-  color: #ff8686;
+  color: #ff7474;
   background-color: #2b2b2b;
   font-family: "proxima-nova", sans-serif;
   text-transform: uppercase;
@@ -154,6 +164,7 @@ img {
   display: block;
   position: relative;
   width: 100%;
+  min-height: 6em;
 }
 .page-cv .cv-bullets .detail {
   font-family: "proxima-nova", sans-serif;
@@ -163,7 +174,7 @@ img {
   font-weight: 600;
   position: absolute;
   top: 25%;
-  left: 40%;
+  left: 35%;
   display: inline-block;
 }
 .page-cv .cv-bullets .detail h2 {
@@ -213,7 +224,14 @@ img {
   z-index: 5000;
 }
 .infoEducation {
-  background-color: #d7e6e9;
+  background-color: #FFEEEA;
+  color: #ff7474;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.aktuelt-content {
+  font-family: "museo-sans-rounded", sans-serif;
+  background-color: #f8f8f8;
 }
 .wrapper {
   -webkit-transition: all .25s ease;
@@ -221,14 +239,16 @@ img {
   -ms-transition: all .25s ease;
   -o-transition: all .25s ease;
   transition: all .25s ease;
-  -webkit-box-shadow: -3px 0 10px rgba(0, 0, 0, 0.8);
-  -moz-box-shadow: -3px 0 10px rgba(0, 0, 0, 0.8);
-  -ms-box-shadow: -3px 0 10px rgba(0, 0, 0, 0.8);
-  -o-box-shadow: -3px 0 10px rgba(0, 0, 0, 0.8);
-  box-shadow: -3px 0 10px rgba(0, 0, 0, 0.8);
+  /*	-webkit-box-shadow:-3px 0 10px rgba(0, 0, 0, 0.8);
+	-moz-box-shadow:-3px 0 10px rgba(0, 0, 0, 0.8);
+	-ms-box-shadow:-3px 0 10px rgba(0, 0, 0, 0.8);
+	-o-box-shadow:-3px 0 10px rgba(0, 0, 0, 0.8);
+	box-shadow:-3px 0 10px rgba(0, 0, 0, 0.8);
+	*/
   position: relative;
   padding-bottom: 8.4em;
-  min-height: 100%;
+  /*min-height:100%;*/
+
   background-color: #fafaf6;
 }
 /*page-head*/
@@ -238,6 +258,7 @@ img {
   bottom: 0 !important;
   left: -80% !important;
   width: 80%;
+  padding-top: 2em;
 }
 .page-head {
   display: none;
@@ -265,10 +286,10 @@ img {
   }
   .page-head {
     display: block;
-    background-color: #2b2b2b;
+    background-color: #f8f8f8;
     border-bottom: 1px solid #464646;
     position: relative;
-    min-height: 3em;
+    min-height: 2.5em;
     max-width: 1310px;
     margin: 0 auto;
     /*svg.css*/
@@ -277,15 +298,14 @@ img {
   .page-head .nav-list li {
     text-transform: uppercase;
     display: block;
-    border-bottom: 1px solid #3b3b3b;
+    border-bottom: none;
   }
   .page-head .nav-list li a {
-    padding: .7em 1em .7em 1em;
-    border-bottom: 1px solid #222;
+    padding: .5em 1em .5em 3em;
     display: block;
-    color: #a3a3a3;
-    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.6);
+    color: #696158;
     letter-spacing: .2em;
+    text-decoration: none;
   }
   .page-head .nav-menu {
     position: absolute;
@@ -293,10 +313,8 @@ img {
     left: 0;
     bottom: -1px;
     width: 50px;
-    background-color: #a18e5c;
     text-indent: 300px;
     overflow: hidden;
-    padding: 1em;
   }
   .page-head .nav-menu {
     background-image: url(../img/menu.svg);
@@ -311,16 +329,30 @@ img {
   }
   /*Fonts*/
   .intro h1 {
-    font-size: 30px;
     font-size: 1.875rem;
-    line-height: 1.6;
     font-weight: 700;
     line-height: 1em;
-    letter-spacing: .05em;
+    letter-spacing: .5em;
     -webkit-transition: opacity .6s linear;
     -moz-transition: opacity .6s linear;
     -ms-transition: opacity .6s linear;
     -o-transition: opacity .6s linear;
     transition: opacity .6s linear;
+  }
+  .page-cv .cv-bullets .detail {
+    left: 29%;
+    top: 25%;
+  }
+  .page-cv .cv-bullets .detail h2 {
+    font-size: 0.9em;
+  }
+  .page-cv .cv-bullets .detail .text {
+    font-weight: normal;
+  }
+  .page-cv .cv-bullets .cv-bullet-content {
+    font-size: 0.8em;
+  }
+  .page-cv .cv-bullets .btn {
+    top: 35%;
   }
 }
